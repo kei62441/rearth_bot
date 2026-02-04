@@ -1,0 +1,1 @@
+worker: python collapse_discord_bot.py
