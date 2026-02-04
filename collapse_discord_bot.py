@@ -1,3 +1,4 @@
+import os
 import json
 import re
 import math
@@ -142,4 +143,5 @@ async def on_ready():
 
 
 client.run(DISCORD_TOKEN)
+
 
