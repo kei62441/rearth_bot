@@ -6,10 +6,9 @@ import urllib.request
 import discord
 from discord.ext import tasks
 
-# ===== 設定 =====
-DISCORD_TOKEN = "ここにBotトークン"
-CHANNEL_ID = 123456789012345678      # 通知チャンネルID
-MENTION_ROLE_ID = 987654321098765432 # CollapseAlert ロールID
+DISCORD_TOKEN = os.environ["DISCORD_TOKEN"]
+CHANNEL_ID = int(os.environ["CHANNEL_ID"])
+MENTION_ROLE_ID = int(os.environ["MENTION_ROLE_ID"])
 
 JSON_URL = "https://map.rearth.xyz/war/tiles/_markers_/marker_world.json"
 CHECK_INTERVAL = 60  # 秒
@@ -143,3 +142,4 @@ async def on_ready():
 
 
 client.run(DISCORD_TOKEN)
+
